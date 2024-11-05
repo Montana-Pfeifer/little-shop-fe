@@ -18,6 +18,7 @@ body {
 aside {
   width: 25%;
   margin: none;
+  background-image: url(https://cdn.abcotvs.com/dip/images/4537141_102218-kgo-billion-dollar-img.jpg);
 }
 
 header {
@@ -36,6 +37,11 @@ h1,
 h2 {
   margin: 0;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
 
 nav {
   display: flex;
@@ -127,4 +133,3 @@ form {
   display: none;
 } 
   
-co
