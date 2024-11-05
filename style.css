@@ -37,6 +37,11 @@ h2 {
   margin: 0;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+
 nav {
   display: flex;
   flex-direction: column;
@@ -127,4 +132,3 @@ form {
   display: none;
 } 
   
-co
