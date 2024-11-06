@@ -18,7 +18,7 @@ This application solves the problem of information overload and decision fatigue
 5.You'll see in the terminal that the project has opened at "http://localhost:5173/"
 
 ### Preview of App:
-(Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off. gifs preferred!)
+https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGVqbzVxYndrZnRubzFwMmU5cnBmdWpiOHdyaDZieWVlMWJid2drdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ySqtIVa0Upa3AkhkrS/giphy.gif
 
 ### Context:
 (Give some context for the project here. How long did you have to work on it? What specific work/improvements did you contribute to this FE application?)
