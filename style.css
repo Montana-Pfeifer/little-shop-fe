@@ -16,9 +16,11 @@ body {
 /* SIDEBAR */
 
 aside {
+  position: fixed;
   width: 25%;
+  height: 100vh;
   margin: none;
-  background-image: url(https://cdn.abcotvs.com/dip/images/4537141_102218-kgo-billion-dollar-img.jpg);
+  background-image: url(https://images.nightcafe.studio/jobs/p1xQqQbta70iUFarDNFt/p1xQqQbta70iUFarDNFt--1--aywzl.jpg?tr=w-2000,c-at_max);
 }
 
 header {
@@ -85,6 +87,9 @@ nav > button:hover,
 /* MAIN */
 
 main {
+  margin-left: 25%; 
+  padding: 20px;
+  overflow-y: scroll; 
   padding: 10px;
   width: 75%;
   background-color: white;
@@ -149,6 +154,7 @@ form {
 .view {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 /* HIDDEN ELEMENTS */
 
