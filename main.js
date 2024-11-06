@@ -10,6 +10,7 @@ const itemsNavButton = document.querySelector("#items-nav")
 const addNewButton = document.querySelector("#add-new-button")
 const showingText = document.querySelector("#showing-text")
 const addSortButton = document.querySelector("#add-sort-button")
+const sortDropdown = document.querySelector("#sort-dropdown")
 
 //Form elements
 const merchantForm = document.querySelector("#new-merchant-form")
@@ -251,7 +252,45 @@ function findMerchant(id) {
   return foundMerchant
   }
 
-  function sortMerchants() {
-    merchants.sort((a, b) => a.attributes.name.localeCompare(b.attributes.name));
-    displayMerchants(merchants);
+function sortMerchants() {
+    const sortOrder = sortDropdown.value; // 'asc' or 'desc'
+    let sortedMerchants;
+  
+    if (sortOrder.includes("merchant-name")) {
+      // Sort by merchant name
+      sortedMerchants = merchants.sort((a, b) => {
+        const nameA = a.attributes.name.toLowerCase();
+        const nameB = b.attributes.name.toLowerCase();
+        return sortOrder === "merchant-name-asc" ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+      });
+      merchants = sortedMerchants;
+      displayMerchants(merchants);
+    } else if (sortOrder.includes("item-")) {
+      // Sort by item attributes (assuming 'item-name', 'item-id', or 'item-price')
+      let sortedItems;
+  
+      if (sortOrder === "item-name-asc" || sortOrder === "item-name-desc") {
+        sortedItems = items.sort((a, b) => {
+          const nameA = a.attributes.name.toLowerCase();
+          const nameB = b.attributes.name.toLowerCase();
+          return sortOrder === "item-name-asc" ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+        });
+      } else if (sortOrder === "item-id-asc" || sortOrder === "item-id-desc") {
+        sortedItems = items.sort((a, b) => {
+          const idA = a.id;
+          const idB = b.id;
+          return sortOrder === "item-id-asc" ? idA - idB : idB - idA;
+        });
+      } else if (sortOrder === "item-price-asc" || sortOrder === "item-price-desc") {
+        sortedItems = items.sort((a, b) => {
+          const priceA = a.attributes.unit_price;
+          const priceB = b.attributes.unit_price;
+          return sortOrder === "item-price-asc" ? priceA - priceB : priceB - priceA;
+        });
+      }
+  
+      // Update items array and re-render
+      items = sortedItems;
+      displayItems(items);
+    }
   }

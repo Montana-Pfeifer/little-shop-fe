@@ -8,7 +8,13 @@ body, html {
   background-color: gray;
 }
 
-body {
+body {background-image: url(https://images.nightcafe.studio/jobs/p1xQqQbta70iUFarDNFt/p1xQqQbta70iUFarDNFt--1--aywzl.jpg?tr=w-2000,c-at_max);
+  background-size: cover;  
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
   display: flex;
   margin: 0px;
 }
@@ -20,24 +26,44 @@ aside {
   width: 25%;
   height: 100vh;
   margin: none;
-  background-image: url(https://images.nightcafe.studio/jobs/p1xQqQbta70iUFarDNFt/p1xQqQbta70iUFarDNFt--1--aywzl.jpg?tr=w-2000,c-at_max);
 }
 
 header {
+  border: solid 10px;
+  border-radius: 75px;
+  border-color: #ffffff;
+  position: relative;
   text-align: center;
-  margin: 10px 10px 80px 10px;
-  background-color: black;
-  color: white;
-  padding: 15px;
+  padding: 20px;
+  background-color: #232220; /* Light, warm color */
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 2.5em;
+header h1, header h2 {
+  font-family: fantasy;
+  position: relative;
+  z-index: 2;
 }
 
-h1, 
-h2 {
-  margin: 0;
+header h1::before, header h2::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: url('https://images.vexels.com/media/users/3/230867/isolated/preview/0647ac4ffdaa3207fe0b18bbabfdc00b-half-peeled-banana-gradient.png') center center no-repeat; /* Replace with banana image URL */
+  background-size: contain; /* Adjust to fit the size of bananas */
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 1;
+  animation: rotateBananas 4s alternate-reverse infinite;
+  opacity: 0.5; /* Optional: adjust opacity for a subtle effect */
+}
+
+/* Adjust rotation speed and direction */
+@keyframes rotateBananas {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 button:hover {
@@ -92,7 +118,8 @@ main {
   overflow-y: scroll; 
   padding: 10px;
   width: 75%;
-  background-color: white;
+  background-color: rgb(0 0 0 / 68%);
+  border-radius: 40px;
 }
 
 form {
@@ -108,11 +135,27 @@ form {
 }
 
 .item {
-  width: 30%;
+  margin: 4px;
+  width: 29%;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(53 95 123 / 86%);
+  border-radius: 10px;
+  border: 10px solid;
+  border-color: rgba(179, 165, 165, 0.831);
 }
 
+ .item h2,
+ .item p {
+  font-size: 15px;
+ }
+
+.item h2 {
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+  font-family: fantasy;
+} 
 .merchant {
   width: 98%;
   flex-direction: row;
@@ -133,6 +176,7 @@ form {
 .display-options {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .display-options > button {
