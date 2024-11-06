@@ -59,6 +59,25 @@ nav > button {
   padding: 20px;
 }
 
+nav > button:hover,
+.submit:hover,
+.delete-merchant:hover,
+.add-new-button:hover,
+.discard-merchant-edits:hover,
+.submit-merchant-edits:hover,
+.edit-merchant:hover,
+.view-merchant-items:hover {
+  animation: pulse 1s infinite;
+  background-color: #1f4b6a; 
+  color: #ffffff; 
+}
+
+
+.merchant:hover {
+  background-color: #5f9dc9; 
+  color: #ffffff; 
+}
+
 .active-nav {
   background-color: white;
 }
@@ -133,3 +152,20 @@ form {
   display: none;
 } 
   
+nav > button:hover,
+.submit:hover,
+.delete-merchant:hover,
+.add-new-button:hover,
+.discard-merchant-edits:hover,
+.submit-merchant-edits:hover,
+.edit-merchant:hover,
+.view-merchant-items:hover {
+  animation: pulse 1s infinite;
+  background-color: #1373b7; 
+  color: #ffffff; 
+}
+
+#merchants-nav:hover {
+  background-color: #1373b7; /* New color when hovered */
+  color: #ffffff; /* Text color change for contrast */
+}
