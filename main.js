@@ -261,9 +261,7 @@ function sortMerchants() {
       sortedMerchants = merchants.sort((a, b) => {
         const nameA = a.attributes.name.toLowerCase();
         const nameB = b.attributes.name.toLowerCase();
-        return sortOrder === "merchant-name-asc"
-          ? nameA.localeCompare(nameB)
-          : nameB.localeCompare(nameA);
+        return sortOrder === "merchant-name-asc" ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
       });
       merchants = sortedMerchants;
       displayMerchants(merchants);
